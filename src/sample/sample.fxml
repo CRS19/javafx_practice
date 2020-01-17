@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" prefHeight="470.0" prefWidth="711.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="432.0" prefWidth="163.0">
+         <children>
+            <Button layoutX="54.0" layoutY="370.0" mnemonicParsing="false" onAction="#holita" text="Button" />
+            <JFXButton buttonType="RAISED" depthTest="DISABLE" layoutX="41.0" layoutY="271.0" onAction="#holita2" prefHeight="50.0" prefWidth="89.0" ripplerFill="#030101" text="hola" wrapText="true">
+               <opaqueInsets>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </opaqueInsets>
+               <effect>
+                  <Bloom />
+               </effect>
+               <font>
+                  <Font name="Bitstream Vera Sans Mono Bold" size="15.0" />
+               </font></JFXButton>
+         </children>
+      </Pane>
+      <Pane prefHeight="432.0" prefWidth="508.0" GridPane.columnIndex="2">
+         <children>
+            <LineChart fx:id="char1" layoutX="14.0" layoutY="16.0" title="Temperatura">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" fx:id="x" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="y" side="LEFT" />
+              </yAxis>
+            </LineChart>
+         </children>
+      </Pane>
+   </children>
+</GridPane>
